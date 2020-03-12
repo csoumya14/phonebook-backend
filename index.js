@@ -13,6 +13,8 @@ app.use(morgan(':method :url :status :res[content-length] - :response-time ms :d
 
 app.use(bodyParser.json());
 
+app.use(express.static('build'));
+
 let persons = [
   {
     name: 'Arto Hellas',
